@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div class="row center text-align-center">
+    <% if @articles.count > 1 %>
+       <h1> Nós achamos <%= @articles.count %> artigos  </h1>
+    <% elsif @articles.count == 1 %>
+      <h1> Nós achamos <%= @songs.count %> artigo.  </h1>
+    <% else %>
+        <h1> Nós não achamos nenhum artigo para você...  </h1>
+    <% end %>
+
+  </div>
+
+        <%= render 'shared/cards', article: @articles %>
+
+</div>

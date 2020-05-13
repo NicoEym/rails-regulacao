@@ -1,0 +1,2 @@
+class GovernancesController < ApplicationController
+end

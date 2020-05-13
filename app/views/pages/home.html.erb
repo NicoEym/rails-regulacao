@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(255,236,250,0.7),rgba(100,100,100,0.1)), url(https://images.unsplash.com/photo-1561592390-42c07289e9cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1508&q=80);">
+  <div class="container-home">
+
+    <h1 class="col-xs-6 col-md-4">Regulação</h1>
+    <p class="col-xs-6 col-md-4">A regulação brasileira mais facil</p>
+     <div class="col-xs-6 col-md-4">
+      <%= simple_form_for :search, url: articles_path, method: "GET", input_html: { class: "form-inline search-form" } do |f| %>
+            <%= f.input :topics, input_html: {value: "", id: "topics_input", class: "placeholder-home white-color-link white-text"}, placeholder: "Palavra chave", label: false %>
+            <%= button_tag type: 'submit', class: "btn btn-search-form-banner inline-absolute" do %>
+              <i class="fas fa-search"></i>
+            <% end %>
+          <% end %>
+    </div>
+  </div>
+</div>
