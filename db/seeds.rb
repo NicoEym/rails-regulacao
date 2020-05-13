@@ -50,10 +50,16 @@ CSV.foreach(filesarticles, csv_options) do |row|
 
   governance_id = Governance.find_by(name: row['title']).id
 
-
-
   Article.create(title: governance_id, chapter: row['chapter'], section: row['section'], details: row['details'], number: row['number'] )
   puts "Creating #{row['governance']} - #{row['chapter']} - #{row['section']}"
+
+  topics = row['topics'].split("/")
+  topics.each do |topic|
+    Topic.create(name: topic) if Topic.where(name: topic).empty?
+    topic_id = Topic.find_by(name: topic).id
+    article_id = Article.find_by(chapter: row['chapter'], section: row['section'], number: row['number']).id
+    Article_topic.create(article_id: article_id, topic_id: topic_id)
+  end
 
 end
 
