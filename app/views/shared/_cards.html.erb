@@ -1,0 +1,30 @@
+<div class="row">
+  <% @articles.each do |song| %>
+    <div class="col-xs-12 col-md-12">
+
+      <div class="card-article">
+        <%= link_to("Lin", article_path(article.id), class:"card-link")  %>
+        <% if article.governance.picture.nil? %>
+          <%  case article.governance.name %>
+            <% when "CVM" then %>
+              <img src="https://images.unsplash.com/photo-1487452066049-a710f7296400?ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80" />
+
+            <% when "Anbima" then %>
+              <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" />
+           <% end %>
+
+        <% else %>
+
+        <% end %>
+
+          <div class="card-article-infos">
+            <h2><%= article.number %> - <%= article.governance.name %> </h2>
+            <h6><%= article.chapter %> - <%= article.section %> </h6>
+            <p><%= article.details %></p>
+
+          </div>
+
+      </div>
+    </div>
+  <% end %>
+</div>

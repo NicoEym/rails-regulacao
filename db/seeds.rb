@@ -5,3 +5,60 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'csv'
+
+Governance.delete_all
+Topic.delete_all
+Article.delete_all
+
+def seed_governance(governance_array)
+
+  governance_array.each do |level|
+    Governance.create(title: governance)
+    puts "Creating #{governance}"
+  end
+end
+
+def seed_topic(topic_array)
+
+  topic_array.each do |topic|
+    Topic.create(name: topic)
+    puts "Creating #{topic}"
+  end
+end
+
+
+governance_seed = ["CVM", "Anbima"]
+
+seed_level(level_seed)
+
+
+
+
+csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
+filesarticles    = 'db/csv_repos/CVM.csv'
+
+CSV.foreach(filesarticles, csv_options) do |row|
+
+  if Governance.where(title: row['title']).empty?
+    Governance.create(title: row['title'])
+    puts "Creating #{row['title']}"
+    puts "#{Governance.find_by(title: row['title'])}"
+
+  end
+
+  governance_id = Governance.find_by(name: row['title']).id
+
+
+
+  Article.create(title: governance_id, chapter: row['chapter'], section: row['section'], details: row['details'], number: row['number'] )
+  puts "Creating #{row['governance']} - #{row['chapter']} - #{row['section']}"
+
+end
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+.banner {
+  height:100vh;
+  max-height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  background-position: 37% 50%;
+  position: relative;
+  // -webkit-transform: scaleX(-1);
+  // transform: scaleX(-1);
+}
+
+
+.top-left {
+  position: relative;
+  top: 60%;
+  left:5%;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  // -webkit-transform: scaleX(-1);
+  // transform: scaleX(-1);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.9;
+  margin-bottom: 30px;
+  // -webkit-transform: scaleX(-1);
+  // transform: scaleX(-1);
+}
+
+
+.form-banner {
+
+  height:100vh;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-label {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.9;
+}
+
+
+
+
+.placeholder-home::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgb(255, 255, 255)!important;
+}
+

@@ -2,3 +2,12 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "button";
+@import "banner";
+
+.white-text {
+  color: rgb(255, 255, 255);
+  &:focus {
+      color: rgb(255, 255, 255);
+    };
+}
