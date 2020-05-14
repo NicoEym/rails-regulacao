@@ -7,6 +7,8 @@
   align-items: center;
   margin-bottom: 1em;
   transition: all .3s ease-in-out;
+  background-color: #FEFF9A;
+
 }
 
 .card-article img {
@@ -27,12 +29,15 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  overflow: hidden;
   text-overflow: ellipsis;
+
 }
 
 .card-article .card-article-infos {
   padding: 16px;
-  text-overflow: ellipsis;
+  max-height: 100%;
+
 }
 
 .card-link {

@@ -1,29 +1,24 @@
 <div class="row">
   <% @articles.each do |article| %>
     <div class="col-xs-12 col-md-12">
-
       <div class="card-article">
-        <%= link_to("",article_path(article.id), class:"card-link")  %>
-
-          <%  case article.governance.title %>
-            <% when "INSTRUÇÃO CVM Nº 555, DE 17 DE DEZEMBRO DE 2014" then %>
-              <img src="https://static-wp-eqi15-prd.euqueroinvestir.com/wp-content/uploads/2020/04/cvm2-590x322.jpg" />
-
-            <% when "Anbima" then %>
-              <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" />
-           <% end %>
-
-
-
-
-
+        <%= link_to("", article_path(article.id), class:"card-link")  %>
+         <img src="https://res.cloudinary.com/dzxrdf9za/image/upload/v1589497004/CVM.png" />
           <div class="card-article-infos">
+            <div class="card-article-title">
+            <% topics = article.topics %>
+             <% topics.each do |topic|  %>
+                <p><%= topic.name %></p>
+              <%  end %>
+            </div>
+            <div class="card-article-title">
             <h2><%= article.governance.title %> </h2>
             <h6><%= article.chapter %> - <%= article.section %> - Artigo <%= article.number %> </h6>
+            </div>
+            <div class="card-article-details">
             <p><%= article.details.html_safe %></p>
-
+            </div>
           </div>
-
       </div>
     </div>
   <% end %>

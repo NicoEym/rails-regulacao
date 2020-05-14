@@ -17,9 +17,6 @@ const initAutocomplete = () => {
     });
   }
 
-
-
-
 };
 
 export { initAutocomplete };
