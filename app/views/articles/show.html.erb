@@ -1,0 +1,19 @@
+<div class="container">
+
+
+  <div class="row center;">
+      <h2><%= @article.governance.title %> </h2>
+  </div>
+  <div class="row spaceb">
+      <h6>Capítulo: <%= @article.chapter %>  </h6>
+      <h6>Seção: <%= @article.section %>  </h6>
+  </div>
+
+  <div class="row center">
+    <h2>Artigo:</h2>
+  </div>
+
+  <div class="row center">
+    <p><%= @article.details.html_safe %>  </p>
+  </div>
+</div>
