@@ -5,7 +5,7 @@
     <p class="col-xs-6 col-md-4">A regulação brasileira mais facil</p>
      <div class="col-xs-6 col-md-4">
       <%= simple_form_for :search, url: articles_path, method: "GET", input_html: { class: "form-inline search-form" } do |f| %>
-            <%= f.input :topics, input_html: {value: "", id: "topics_input", class: "placeholder-home white-color-link white-text"}, placeholder: "Palavra chave", label: false %>
+            <%= f.input :topics, input_html: {value: "", id: "topics_input", class: "placeholder-home"}, placeholder: "Palavra chave", label: false %>
             <%= button_tag type: 'submit', class: "btn btn-search-form-banner inline-absolute" do %>
               <i class="fas fa-search"></i>
             <% end %>
