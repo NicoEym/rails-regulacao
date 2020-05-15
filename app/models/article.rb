@@ -4,5 +4,6 @@ class Article < ApplicationRecord
   validates :chapter, presence: true
   validates :section, presence: true
   validates :details, presence: true
+  has_many :article_topics
   has_many :topics, through: :article_topics
 end

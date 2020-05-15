@@ -1,6 +1,6 @@
 .card-article {
   overflow: hidden;
-  height: 120px;
+  height: 12em;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -8,6 +8,7 @@
   margin-bottom: 1em;
   transition: all .3s ease-in-out;
   background-color: #FEFF9A;
+  border-radius: 1em;
 
 }
 
@@ -29,8 +30,7 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
 
 }
 
@@ -40,6 +40,10 @@
 
 }
 
+.card-article .card-article-topics {
+  margin-bottom: 1em;
+
+}
 .card-link {
   position: absolute;
   top: 0;
