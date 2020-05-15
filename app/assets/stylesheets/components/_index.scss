@@ -4,7 +4,8 @@
 @import "navbar";
 @import "button";
 @import "banner";
-@import "cards";
+@import "cards_article";
+@import "cards_topic";
 @import "form";
 
 .white-text {
@@ -16,7 +17,7 @@
 
 
 body {
-  background-color: #EBEBEB;
+  background-color: #F9F9F9;
 }
 
 
@@ -34,12 +35,13 @@ body {
     padding: 2em;
     margin-right: auto;
     margin-left: auto;
-    background-color: #CFFECF ;
+    background-color: #F3F3F3 ;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     flex-direction: column;
      align-items: center;
+     border-radius: 0.7em;
 }
 
 
