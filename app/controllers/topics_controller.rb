@@ -4,6 +4,17 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topics = Topic.find(params[:id])
+    @search = params["search"]
+
+    if @search.present?
+
+    @topic = Topic.find_by(name: @search["topic"])
+    @articles = @topic.articles
+    else
+      @topic = Topic.find(params[:id])
+      @articles = @topic.articles
+    end
+
+
   end
 end

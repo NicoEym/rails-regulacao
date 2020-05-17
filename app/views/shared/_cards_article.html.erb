@@ -1,14 +1,9 @@
 <div class="row">
-  <div id="topics-range" class="col-xs-12 col-md-12">
-    <% @topics.each do |topic|  %>
-      <p><%= topic %></p>
-    <% end %>
-  </div>
-  <% @articles.each do |article| %>
+ <% @articles.each do |article| %>
     <div class="col-xs-12 col-md-12">
       <div class="card-article">
         <%= link_to("", article_path(article.id), class:"card-link")  %>
-         <img src="https://res.cloudinary.com/dzxrdf9za/image/upload/v1589497004/CVM.png" />
+         <!-- <img src="https://res.cloudinary.com/dzxrdf9za/image/upload/v1589497004/CVM.png" /> -->
           <div class="card-article-infos">
             <div class="card-article-topics">
             <% topics = article.topics %>

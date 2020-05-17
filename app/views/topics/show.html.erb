@@ -2,18 +2,12 @@
 
 
   <div class="row center;">
-      <h2><%= @topics.count %> </h2>
+      <h2>Assunto: <%= @topic.name %> </h2>
+
   </div>
   <div class="row spaceb">
-      <h6>Capítulo: <%= @article.chapter %>  </h6>
-      <h6>Seção: <%= @article.section %>  </h6>
+           <h3><%= @articles.count %> artigos relacionados em ... textos</h3>
   </div>
 
-  <div class="row center">
-    <h2>Artigo:</h2>
-  </div>
-
-  <div class="row center">
-    <p><%= @article.details.html_safe %>  </p>
-  </div>
+  <%= render 'shared/cards_article', article: @articles %>
 </div>
