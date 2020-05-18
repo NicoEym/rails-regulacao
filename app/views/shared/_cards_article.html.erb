@@ -7,16 +7,18 @@
           <div class="card-article-infos">
             <div class="card-article-topics">
             <% topics = article.topics %>
-             <% topics.each do |topic|  %>
-                <a class="btn-ghost"><%= topic.name %></a>
-              <% end %>
+
             </div>
             <div class="card-article-title">
             <h2><%= article.governance.title %> </h2>
-            <h6><%= article.chapter %> - <%= article.section %> - Artigo <%= article.number %> </h6>
+            <h5><%= article.chapter %> <br> <%= article.section %> <br> Artigo <%= article.number %> </h5>
             </div>
             <div class="card-article-details">
-            <p><%= article.details.html_safe %></p>
+             <h6>
+             <% topics.each do |topic|  %>
+                #<%= topic.name %>
+              <% end %>
+              </h6>
             </div>
           </div>
       </div>
