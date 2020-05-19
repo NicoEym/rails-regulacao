@@ -6,6 +6,15 @@ class GovernancesController < ApplicationController
 
   def show
     @governance = Governance.find(params[:id])
-  end
+    @articles = @governance.articles.all
+    @articles = @articles.sort_by { |article| [article.number] }
 
+    @chapters = []
+    @articles.each do |article|
+      @chapters << article.chapter
+    end
+
+    @chapters = @chapters.uniq
+
+  end
 end
