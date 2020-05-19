@@ -3,25 +3,27 @@
     <div class="col-xs-12 col-md-12">
       <div class="card-article">
         <%= link_to("", article_path(article.id), class:"card-link")  %>
-         <!-- <img src="https://res.cloudinary.com/dzxrdf9za/image/upload/v1589497004/CVM.png" /> -->
+         <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
           <div class="card-article-infos">
-            <div class="card-article-topics">
-            <% topics = article.topics %>
-
-            </div>
             <div class="card-article-title">
-            <h2><%= article.governance.title %> </h2>
-            <h5><%= article.chapter %> <br> <%= article.section %> <br> Artigo <%= article.number %> </h5>
+              <h5>Artigo <%= article.number %> </h5>
+              <h5><%= article.governance.title %> </h5>
             </div>
-            <div class="card-article-details">
-             <h6>
+            <div class="card-article-topics">
+             <h5>
+              <% topics = article.topics %>
              <% topics.each do |topic|  %>
                 #<%= topic.name %>
               <% end %>
-              </h6>
+              </h5>
+            </div>
+            <div>
+              <p><%= article.chapter %> - <%= article.section %></p>
             </div>
           </div>
       </div>
     </div>
   <% end %>
 </div>
+
+
