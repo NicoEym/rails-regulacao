@@ -1,26 +1,12 @@
 <div class="container">
+   <div class="row center text-align-center">
+      <h1> <%= @governance.title%> </h1>
+    </div>
 
-  <h1> <%= @governance.title%> </h1>
+<%= render 'shared/cards_article', article: @articles %>
 
-  <% @chapters.each do |chapter| %>
-    <h3><%=chapter %> </h3>
-    <ul>
-    <% @articles.each do |article| %>
-      <% if chapter == article.chapter %>
-        <div class="card-article">
-          <li><%=link_to("" , article_path(article.id)) %>
-            <h4>Artigo <%= article.number %> - <%= article.section %></h4>
-              <p><u> Assuntos deste artigo:</u></p>
-                <div >
-                  <% article.topics.each do |topic| %>
-                    <p class="text-inline"> #<%=topic.name %></p>
-                  <% end %>
-                </div>
-          </li>
-        </div>
-      <% end %>
-      <% end %>
-    </ul>
-  <% end %>
 </div>
+
+
+
 
