@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'csv'
+require 'rubygems'
+require 'algoliasearch'
 
 
 ArticleTopic.delete_all
@@ -43,6 +45,27 @@ end
 
 
 
+client = Algolia::Client.new(application_id: ENV['ALGOLIASEARCH_APPLICATION_ID'], api_key: ENV['ALGOLIASEARCH_ADMIN_API_KEY'])
+index = client.init_index('dev_TOPIC')
+
+
+topics =Topic.all
+topics_array = []
+topics.each do |topic|
+  topic_hash = {name: topic.name, id: topic.id }
+  topics_array << topic_hash
+end
+index.add_objects(topics_array)
+
+index = client.init_index('dev_ARTICLE')
+
+articles =Article.all
+articles_array = []
+articles.each do |article|
+  article_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details }
+  article_array << article_hash
+end
+index.add_objects(article_array)
 
 
 
