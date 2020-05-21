@@ -1,9 +1,9 @@
 class Topic < ApplicationRecord
-  # include AlgoliaSearch
+  include AlgoliaSearch
 
-  # algoliasearch do
-  #   attributes :name
-  # end
+  algoliasearch do
+    attributes :name
+  end
 
   validates :name, presence: true
   has_many :article_topics
