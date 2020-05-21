@@ -46,26 +46,27 @@ require 'algoliasearch'
 
 
 client = Algolia::Client.new(application_id: ENV['ALGOLIASEARCH_APPLICATION_ID'], api_key: ENV['ALGOLIASEARCH_ADMIN_API_KEY'])
-index = client.init_index('dev_TOPIC')
+# index = client.init_index('dev_TOPIC')
 
 
-topics =Topic.all
-topics_array = []
-topics.each do |topic|
-  topic_hash = {name: topic.name, id: topic.id, artigos: topic.articles.count }
-  topics_array << topic_hash
-end
-index.add_objects(topics_array)
-
-# index = client.init_index('dev_ARTICLE')
-
-# articles =Article.all
-# articles_array = []
-# articles.each do |article|
-#   article_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details }
-#   article_array << article_hash
+# topics =Topic.all
+# topics_array = []
+# topics.each do |topic|
+#   topics_hash = {name: topic.name, id: topic.id, artigos: topic.articles.count }
+#   topics_array << topics_hash
 # end
-# index.add_objects(article_array)
+# index.add_objects(topics_array)
+
+index = client.init_index('dev_ARTICLE')
+
+articles =Article.all
+articles_array = []
+articles.each do |article|
+  articles_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details, governance: article.governance.title }
+  articles_array << articles_hash
+end
+index.add_objects(articles_array)
+
 
 
 
