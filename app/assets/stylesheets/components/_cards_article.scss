@@ -42,7 +42,7 @@
 }
 
 .card-article .card-article-infos {
-  padding: 16px;
+  padding: 0.5em;
   max-height: 100%;
   width:100%;
   height:100%;
@@ -60,13 +60,12 @@
 
 
 .card-article .card-article-topics {
-  margin-bottom: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .card-article .card-article-details {
-  margin-bottom: 0.5em;
+
   overflow: hidden;
   text-overflow: "…";
 }

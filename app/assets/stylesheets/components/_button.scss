@@ -1,13 +1,14 @@
 
 
 .btn-outline {
-  background-color: rgba( 210, 210, 210, 0.8);
+  background-color: rgba( 210, 210, 210, 0.65);
   border: 1px solid white;
   padding: 0.8em;
   color: white;
   border-radius: 7px;
   text-align: center;
   font-size: 1.3em;
+  width: 100%;
   &:hover {
     background-color: rgba( 220, 220, 220, 0.5);
     color: white;
@@ -51,4 +52,12 @@
     text-decoration: none;
     color: white;
   }
+}
+
+.button-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
 }

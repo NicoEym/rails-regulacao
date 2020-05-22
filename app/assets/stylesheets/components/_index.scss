@@ -68,3 +68,17 @@ body {
 .text-inline {
   display: inline;
 };
+
+.flex {
+  display:flex;
+
+}
+
+.justify-around{
+  justify-content: space-between;
+}
+
+.padding15 {
+  padding-right: 15px;
+  padding-left: 15px;
+}

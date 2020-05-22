@@ -62,7 +62,11 @@ index = client.init_index('dev_ARTICLE')
 articles =Article.all
 articles_array = []
 articles.each do |article|
-  articles_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details, governance: article.governance.title }
+  topics_string = ""
+  article.topics.each do |topic|
+    topics_string = topics_string + topic.name
+  end
+  articles_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details, governance: article.governance.title, topics: topics_string}
   articles_array << articles_hash
 end
 index.add_objects(articles_array)

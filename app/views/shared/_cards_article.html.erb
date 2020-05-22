@@ -9,21 +9,23 @@
               <h5>Artigo <%= article.number %> </h5>
               <h5><%= article.governance.title %> </h5>
             </div>
+            <div>
+              <p><%= article.chapter %> - <%= article.section %></p>
+            </div>
+            <div class="card-article-details">
+              <p><%= article.details[0..300].html_safe %>[...]</p>
+            </div>
             <div class="card-article-topics">
-             <h5>
+            <h5>
               <% topics = article.topics %>
-             <% topics.each do |topic|  %>
+              <% topics.each do |topic|  %>
                 #<%= topic.name %>
               <% end %>
               </h5>
-            </div>
-            <div>
-              <p><%= article.chapter %> - <%= article.section %></p>
             </div>
           </div>
       </div>
     </div>
   <% end %>
 </div>
-
 
