@@ -1,12 +1,13 @@
-.navbar-sing {
+.navbar-reg {
   justify-content: space-between;
   background: #F9F9F9;
+  margin-bottom: 1em;
 }
 
-.navbar-sing .navbar-collapse {
+.navbar-reg .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-sing .navbar-brand img {
-  width: 40px;
+.navbar-reg .navbar-brand img {
+  width: 60px;
 }

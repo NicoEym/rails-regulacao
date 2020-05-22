@@ -41,10 +41,7 @@ const new_html = `
                       <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
                       <div class="card-article-infos">
                         <div class="card-article-title">
-                          <h5>Artigo ${json.number} </h5>
-                          <h5> CVM 555 </h5>
-                        </div>
-                        <div>
+                          <h5> ${json.governance} </h5>
                           <p>${json.chapter} - ${json.section}</p>
                         </div>
                         <div class="card-article-details">

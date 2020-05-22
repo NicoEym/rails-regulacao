@@ -6,14 +6,8 @@
          <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
           <div class="card-article-infos">
             <div class="card-article-title">
-              <h5>Artigo <%= article.number %> </h5>
               <h5><%= article.governance.title %> </h5>
-            </div>
-            <div>
               <p><%= article.chapter %> - <%= article.section %></p>
-            </div>
-            <div class="card-article-details">
-              <p><%= article.details[0..300].html_safe %>[...]</p>
             </div>
             <div class="card-article-topics">
             <h5>

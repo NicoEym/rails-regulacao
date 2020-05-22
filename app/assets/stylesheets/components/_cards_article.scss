@@ -18,7 +18,7 @@
 
 .card-article img {
   height: 100%;
-  width: 120px;
+  width: 100px;
   object-fit: cover;
 }
 
@@ -54,7 +54,7 @@
 
 .card-article .card-article-title {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   opacity: .7;
 }
 
