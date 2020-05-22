@@ -1,6 +1,6 @@
 <div class="container">
 <%= simple_form_for :search, url: topic_path(:id), method: "GET", input_html: { class: "form-inline" } do |f| %>
-            <%= f.input :topic, input_html: {value: "", id: "topics_input", class: "placeholder-home search-form"}, placeholder: "Palavra chave", label: false %>
+            <%= f.input :name, input_html: {value: "", id: "topics_input", class: "placeholder-home search-form"}, placeholder: "Palavra chave", label: false %>
             <%= button_tag type: 'submit', class: "btn btn-search-form-banner inline-absolute" do %>
 
             <% end %>
@@ -12,7 +12,5 @@
 
 
   </div>
-
-
 
 </div>

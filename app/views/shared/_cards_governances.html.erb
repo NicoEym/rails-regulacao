@@ -1,13 +1,13 @@
 <div class="row">
 <% @governances.each do |governance| %>
-    <div class="col-xs-12 col-md-4">
+    <div class="col-xs-12 col-md-12">
       <div class="card-topic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
         <%= link_to("", governance_path(governance.id), class:"card-link")  %>
            <div class="card-topic_details">
 
 
-            <h4><%= governance.title %> </h4>
-            <h6><%= governance.articles.count %> artigos.</h6>
+            <h4 class="text-center"><%= governance.title %> </h4>
+            <h6 class="text-center"><%= governance.articles.count %> artigos.</h6>
 
 
           </div>
