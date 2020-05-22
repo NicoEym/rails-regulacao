@@ -1,5 +1,5 @@
 const instantSearchArticles = () => {
-  var client = algoliasearch('OW017EKY1Y', '4bd2ad351fc1bb55a5ffd9c2fd98fffd');
+  var client = algoliasearch('OW017EKY1Y', '4839162a82170c53d087221d09185ab3');
   var index = client.initIndex('dev_ARTICLE');
   const algoliaSearch = document.querySelector("#articles_input");
 

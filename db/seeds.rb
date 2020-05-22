@@ -11,37 +11,38 @@ require 'rubygems'
 require 'algoliasearch'
 
 
-ArticleTopic.delete_all
-Topic.delete_all
-Article.delete_all
-Governance.delete_all
 
-csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
-filesarticles    = 'db/csv_repos/CVM.csv'
+# ArticleTopic.delete_all
+# Topic.delete_all
+# Article.delete_all
+# Governance.delete_all
 
-CSV.foreach(filesarticles, csv_options) do |row|
+# csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
+# filesarticles    = 'db/csv_repos/CVM.csv'
 
-  if Governance.where(title: row['title']).empty?
-    Governance.create(title: row['title'])
-    puts "Creating #{row['title']}"
-    puts "#{Governance.find_by(title: row['title'])}"
-  end
+# CSV.foreach(filesarticles, csv_options) do |row|
 
-  governance_id = Governance.find_by(title: row['title']).id
+#   if Governance.where(title: row['title']).empty?
+#     Governance.create(title: row['title'])
+#     puts "Creating #{row['title']}"
+#     puts "#{Governance.find_by(title: row['title'])}"
+#   end
 
-  article = Article.create(governance_id: governance_id, chapter: row['chapter'], section: row['section'], details: row['details'], number: row['number'] )
-  puts "Creating Article #{row['number']} in #{row['governance']} - #{row['chapter']} - #{row['section']}"
+#   governance_id = Governance.find_by(title: row['title']).id
 
-  topics = row['topics'].split("/")
-  topics.each do |topic|
-    Topic.create(name: topic) if Topic.where(name: topic).empty?
-    topic_id = Topic.find_by(name: topic).id
-    puts "Creating Topic #{topic}"
-    ArticleTopic.create(article_id: article.id, topic_id: topic_id)
-    puts "Creating jointure article with topic #{topic}"
-  end
+#   article = Article.create(governance_id: governance_id, chapter: row['chapter'], section: row['section'], details: row['details'], number: row['number'] )
+#   puts "Creating Article #{row['number']} in #{row['governance']} - #{row['chapter']} - #{row['section']}"
 
-end
+#   topics = row['topics'].split("/")
+#   topics.each do |topic|
+#     Topic.create(name: topic) if Topic.where(name: topic).empty?
+#     topic_id = Topic.find_by(name: topic).id
+#     puts "Creating Topic #{topic}"
+#     ArticleTopic.create(article_id: article.id, topic_id: topic_id)
+#     puts "Creating jointure article with topic #{topic}"
+#   end
+
+# end
 
 
 
