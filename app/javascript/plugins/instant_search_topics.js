@@ -41,7 +41,7 @@ const new_html = `
 
                          <div class="card-topic_details">
                           <h2 class="text-center">${json.name} </h2>
-                          <h6 class="text-center">${json.artigos} artigos relacionados...</h6>
+                          <h6 class="text-center">${json.artigos} artigo(s) relacionado(s)...</h6>
                         </div>
                     </div>
                   </div>
