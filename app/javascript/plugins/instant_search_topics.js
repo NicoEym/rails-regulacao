@@ -1,5 +1,5 @@
 const instantSearchTopics = () => {
-  var client = algoliasearch('OW017EKY1Y', '4bd2ad351fc1bb55a5ffd9c2fd98fffd');
+  var client = algoliasearch(process.env.ALGOLIASEARCH_APPLICATION_ID, process.env.ALGOLIASEARCH_API_KEY);
   var index = client.initIndex('dev_TOPIC');
   const algoliaSearch = document.querySelector("#topics_input");
 
