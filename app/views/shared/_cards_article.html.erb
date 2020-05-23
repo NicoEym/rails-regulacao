@@ -6,16 +6,11 @@
          <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
           <div class="card-article-infos">
             <div class="card-article-title">
-              <h5><%= article.governance.title %> </h5>
-              <p><%= article.chapter %> - <%= article.section %></p>
+              <h6><%= article.governance.title %> </h6>
+              <h5 class="green"><%= article.chapter %> - <%= article.section %></h5>
             </div>
-            <div class="card-article-topics">
-            <h5>
-              <% topics = article.topics %>
-              <% topics.each do |topic|  %>
-                #<%= topic.name %>
-              <% end %>
-              </h5>
+           <div class="card-article-details">
+                <p><i><%= article.details[0..100].html_safe %> [...]</i></p>
             </div>
           </div>
       </div>

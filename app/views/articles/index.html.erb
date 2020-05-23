@@ -1,13 +1,18 @@
 <div class="container">
+  <div class="header-form">
+    <div class="text-center">
+      <p>Ariane vai pesquisar dentro do conteúdo de <%= @articles.count %> artigos e sugerir resultados para você.</p>
+    </div>
 
   <%= simple_form_for :search, url: '#', method: "GET", input_html: { class: "form-inline" } do |f| %>
-        <%= f.input :article, input_html: {value: "", id: "articles_input", class: "placeholder-home search-form"}, label: "Palavra chave", label: false %>
+        <%= f.input :article, input_html: {value: "", id: "articles_input", class: "search-form"}, placeholder: "Digite aqui...", label: false %>
         <%= button_tag type: '', class: "btn btn-search-form-banner inline-absolute" do %>
 
       <% end %>
     <% end %>
-  <div class="row">
+    <div class="row">
 
+    </div>
   </div>
 </div>
 

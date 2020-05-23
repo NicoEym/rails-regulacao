@@ -1,21 +1,10 @@
 <div class="container">
-
-  <%= simple_form_for :search, url: "#", method: "GET", input_html: { class: "form-inline" } do |f| %>
-            <%= f.input :article, input_html: {value: "", id: "articles_input", class: "placeholder-home search-form"}, placeholder: "Palavra chave", label: false %>
-            <%= button_tag type: 'submit', class: "btn btn-search-form-banner inline-absolute" do %>
-
-            <% end %>
-      <% end %>
-
   <div class="row">
 
     <%= render 'shared/cards_article', article: @articles %>
 
 
   </div>
-
-
-
 </div>
 
 

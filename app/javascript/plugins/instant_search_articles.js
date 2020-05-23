@@ -41,11 +41,11 @@ const new_html = `
                       <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
                       <div class="card-article-infos">
                         <div class="card-article-title">
-                          <h5> ${json.governance} </h5>
-                          <p>${json.chapter} - ${json.section}</p>
+                          <h6>${json.governance}</h6>
+                          <h5 class="green">${json.chapter} - ${json.section}</h5>
                         </div>
                         <div class="card-article-details">
-                          <p>${json.details}</p>
+                          <p>${json.details.slice(0,100)} [...]</p>
                         </div>
                       </div>
                     </div>

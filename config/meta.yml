@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Ariane"
+meta_title: "Ariane - Regulação financeira brasileira"
+meta_description: "Ariane vai te ajudar a achar o seu caminho na regulação dos mercados financeiros brasileiros"
+meta_image: "metaphoto.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
