@@ -27,9 +27,16 @@ body {
   background-color: #F9F9F9;
 }
 
+.green {
+  color: #009B3A;
+}
 
 .no-ugly-link {
   text-decoration: none;
+}
+
+.center {
+  text-align: center;
 }
 
 .container-home {
@@ -51,8 +58,8 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-     align-items: center;
-     border-radius: 0.7em;
+    align-items: center;
+    border-radius: 0.7em;
 }
 
 
@@ -81,4 +88,9 @@ body {
 .padding15 {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.width100 {
+  width: 100%;
+
 }

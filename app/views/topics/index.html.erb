@@ -1,12 +1,18 @@
 <div class="container">
+  <div class="header-form">
+    <div class="text-center">
+      <p>Ariane vai pesquisar artigos dentro de <%= @topics.count %> temas.</p>
+    </div>
+
 <%= simple_form_for :search, url: topic_path(:id), method: "GET", input_html: { class: "form-inline" } do |f| %>
-            <%= f.input :name, input_html: {value: "", id: "topics_input", class: "placeholder-home search-form"}, placeholder: "Palavra chave", label: false %>
+            <%= f.input :name, input_html: {value: "", id: "topics_input", class: "search-form"}, placeholder: "Procure um tema", label: false %>
             <%= button_tag type: 'submit', class: "btn btn-search-form-banner inline-absolute" do %>
 
             <% end %>
       <% end %>
 
-  <div class="row">
+  </div>
+  <div class="row width100">
 
     <%= render 'shared/cards_topic', topic: @topics %>
 
