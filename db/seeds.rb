@@ -43,7 +43,7 @@ end
 
 
 client = Algolia::Client.new(application_id: ENV['ALGOLIASEARCH_APPLICATION_ID'], api_key: ENV['ALGOLIASEARCH_ADMIN_API_KEY'])
-index = client.init_index('prod_TOPIC')
+index = client.init_index('TOPIC')
 
 
 topics =Topic.all
@@ -54,7 +54,7 @@ topics.each do |topic|
 end
 index.add_objects(topics_array)
 
-index = client.init_index('prod_ARTICLE')
+index = client.init_index('ARTICLE')
 
 
 articles =Article.all
