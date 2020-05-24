@@ -8,9 +8,9 @@ require 'algoliasearch'
 
 ArticleTopic.delete_all
 Topic.delete_all
-Topic.clear_index!
+# Topic.clear_index!
 Article.delete_all
-Article.clear_index!
+# Article.clear_index!
 Governance.delete_all
 
 csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
@@ -43,7 +43,7 @@ end
 
 
 client = Algolia::Client.new(application_id: ENV['ALGOLIASEARCH_APPLICATION_ID'], api_key: ENV['ALGOLIASEARCH_ADMIN_API_KEY'])
-index = client.init_index('dev_TOPIC')
+index = client.init_index('prod_TOPIC')
 
 
 topics =Topic.all
@@ -54,7 +54,7 @@ topics.each do |topic|
 end
 index.add_objects(topics_array)
 
-index = client.init_index('dev_ARTICLE')
+index = client.init_index('prod_ARTICLE')
 
 
 articles =Article.all
@@ -64,7 +64,7 @@ articles.each do |article|
   article.topics.each do |topic|
     topics_string = topics_string + topic.name + " "
   end
-  articles_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details, governance: article.governance.title, topics: topics_string}
+  articles_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details, governance: article.governance.title, topics: article.topics}
   articles_array << articles_hash
 end
 index.add_objects(articles_array)
