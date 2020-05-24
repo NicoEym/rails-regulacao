@@ -7,10 +7,12 @@
           <div class="card-article-infos">
             <div class="card-article-title">
               <h6><%= article.governance.title %> </h6>
-              <h5 class="green"><%= article.chapter %> - <%= article.section %></h5>
+              <p class="green chapter-font"><b><%= article.chapter %> - <%= article.section %><b></p>
             </div>
-           <div class="card-article-details">
-                <p><i><%= article.details[0..100].html_safe %> [...]</i></p>
+           <div class="card-article-topics">
+                <% article.topics.each do |topic|  %>
+                <p class="text-inline"><i>#<%= topic.name %></i></p>
+                <% end  %>
             </div>
           </div>
       </div>

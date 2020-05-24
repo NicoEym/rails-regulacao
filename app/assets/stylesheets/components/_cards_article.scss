@@ -53,8 +53,9 @@
 }
 
 .card-article .card-article-title {
-  display: flex;
+
   flex-direction: column;
+  justify-content: space-around;
   opacity: .7;
 }
 
