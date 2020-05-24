@@ -42,7 +42,7 @@ const new_html = `
                       <div class="card-article-infos">
                         <div class="card-article-title">
                           <h6>${json.governance}</h6>
-                          <h5 class="green">${json.chapter} - ${json.section}</h5>
+                          <p class="green"><b>${json.chapter} - ${json.section}</b></p>
                         </div>
                         <div class="card-article-details">
                           <p>${json.details.slice(0,100)} [...]</p>

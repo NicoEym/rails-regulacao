@@ -19,7 +19,7 @@ filesarticles    = 'db/csv_repos/CVM.csv'
 CSV.foreach(filesarticles, csv_options) do |row|
 
   if Governance.where(title: row['title']).empty?
-    Governance.create(title: row['title'])
+    Governance.create(title: row['title'], photo_url: row['photo_url'])
     puts "Creating #{row['title']}"
     puts "#{Governance.find_by(title: row['title'])}"
   end
