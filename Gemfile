@@ -15,7 +15,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem "algoliasearch-rails"
-
+gem 'hogan_assets'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
