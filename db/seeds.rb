@@ -42,32 +42,32 @@ end
 
 
 
-client = Algolia::Client.new(application_id: ENV['ALGOLIASEARCH_APPLICATION_ID'], api_key: ENV['ALGOLIASEARCH_ADMIN_API_KEY'])
-index = client.init_index('TOPIC')
+# client = Algolia::Client.new(application_id: ENV['ALGOLIASEARCH_APPLICATION_ID'], api_key: ENV['ALGOLIASEARCH_ADMIN_API_KEY'])
+# index = client.init_index('TOPIC')
 
 
-topics =Topic.all
-topics_array = []
-topics.each do |topic|
-  topics_hash = {name: topic.name, id: topic.id, artigos: topic.articles.count }
-  topics_array << topics_hash
-end
-index.add_objects(topics_array)
+# topics =Topic.all
+# topics_array = []
+# topics.each do |topic|
+#   topics_hash = {name: topic.name, id: topic.id, artigos: topic.articles.count }
+#   topics_array << topics_hash
+# end
+# index.add_objects(topics_array)
 
-index = client.init_index('ARTICLE')
+# index = client.init_index('ARTICLE')
 
 
-articles =Article.all
-articles_array = []
-articles.each do |article|
-  topics_string = ""
-  article.topics.each do |topic|
-    topics_string = topics_string + topic.name + " "
-  end
-  articles_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details, governance: article.governance.title, topics: article.topics}
-  articles_array << articles_hash
-end
-index.add_objects(articles_array)
+# articles =Article.all
+# articles_array = []
+# articles.each do |article|
+#   topics_string = ""
+#   article.topics.each do |topic|
+#     topics_string = topics_string + topic.name + " "
+#   end
+#   articles_hash = {number: article.number, id: article.id, chapter: article.chapter, section: article.section, details: article.details, governance: article.governance.title, topics: article.topics}
+#   articles_array << articles_hash
+# end
+# index.add_objects(articles_array)
 
 
 

@@ -2,9 +2,9 @@ class Article < ApplicationRecord
   include AlgoliaSearch
 
   algoliasearch do
-    attributes :chapter, :section, :number, :details, :topics, :governance
+    attributes :chapter, :section, :number, :details, :governance
 
-    searchableAttributes ['topics', 'section', 'details', 'governance']
+    searchableAttributes ['details', 'section', 'governance']
     customRanking ['asc(number)']
   end
 
