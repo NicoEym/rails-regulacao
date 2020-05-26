@@ -4,13 +4,13 @@
       <p>Ariane vai pesquisar artigos dentro de <%= @topics.count %> temas.</p>
     </div>
 
-<%= simple_form_for :search, url: topic_path(:id), method: "GET", input_html: { class: "form-inline" } do |f| %>
+    <%= simple_form_for :search, url: topic_path(:id), method: "GET", input_html: { class: "form-inline" } do |f| %>
             <%= f.input :name, input_html: {value: "", id: "topics_input", class: "search-form"}, placeholder: "Procure um tema", label: false %>
             <%= button_tag type: 'submit', class: "btn btn-search-form-banner inline-absolute" do %>
 
             <% end %>
       <% end %>
-
+  <img src="https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1589967327/Algolia_com_Website_assets/images/shared/algolia_logo/search-by-algolia-light-background.png" alt="">
   </div>
   <div class="row width100">
 
