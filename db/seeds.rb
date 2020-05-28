@@ -14,7 +14,7 @@ Article.clear_index!
 Governance.delete_all
 
 csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
-filesarticles    = 'db/csv_repos/test.csv'
+filesarticles    = 'db/csv_repos/data.csv'
 
 CSV.foreach(filesarticles, csv_options) do |row|
 
