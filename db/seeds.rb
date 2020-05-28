@@ -26,7 +26,7 @@ CSV.foreach(filesarticles, csv_options) do |row|
 
   governance_id = Governance.find_by(title: row['title']).id
 
-  article = Article.create(governance_id: governance_id, chapter: row['chapter'], section: row['section'], details: row['details'], number: row['number'] )
+  article = Article.create(governance_id: governance_id, chapter: row['chapter'], section: row['section'], details: row['details'], number: row['number'], topic_string: row['topics'] )
   puts "Creating Article #{row['number']} in #{row['governance']} - #{row['chapter']} - #{row['section']}"
 
 
@@ -43,7 +43,6 @@ CSV.foreach(filesarticles, csv_options) do |row|
 
 
 end
-
 
 
 # client = Algolia::Client.new(application_id: ENV['ALGOLIASEARCH_APPLICATION_ID'], api_key: ENV['ALGOLIASEARCH_ADMIN_API_KEY'])
