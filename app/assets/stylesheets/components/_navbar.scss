@@ -2,6 +2,8 @@
   justify-content: space-between;
   background: #F9F9F9;
   margin-bottom: 1em;
+  box-shadow: 1em;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
 
 .navbar-reg .navbar-collapse {
@@ -10,4 +12,5 @@
 
 .navbar-reg .navbar-brand img {
   width: 60px;
+  margin-left: 0.5rem;
 }
