@@ -18,21 +18,21 @@ search.addWidgets([
     templates: {
       item: `
                   <div class="col-xs-12 col-md-12">
-                  <a href="/articles/"id"/">
+                  <a href="/articles/{{objectID}}/">
                     <div class="card-article">
                       <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
                       <div class="card-article-infos">
                        <div class="hit-name">
-                        <p>Capitulo</p>
                         {{#helpers.highlight}}{ "attribute": "governance" }{{/helpers.highlight}}
-
+                        {{#helpers.highlight}}{ "attribute": "chapter" }{{/helpers.highlight}}
+                        {{#helpers.highlight}}{ "attribute": "section" }{{/helpers.highlight}}
                        </div>
-                         <div class="hit-description">
-                            {{#helpers.highlight}}{ "attribute": "details" }{{/helpers.highlight}}
-                         </div>
+                       <div class="hit-description">
+                          {{#helpers.highlight}}{ "attribute": "details" }{{/helpers.highlight}}
+                       </div>
                       </div>
                     </div>
-                </div>`,
+                  </div>`,
     },
   }),
 
