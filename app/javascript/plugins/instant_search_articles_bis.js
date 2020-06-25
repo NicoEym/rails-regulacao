@@ -12,6 +12,14 @@ search.addWidgets([
     placeholder: 'Pesquisa nos artigos',
   }),
 
+  instantsearch.widgets.clearRefinements({
+    container: '#governance-list',
+  }),
+  instantsearch.widgets.refinementList({
+    container: '#governance-list',
+    attribute: 'governance.title',
+  }),
+
   // 3. Plug the search results into the product container
   instantsearch.widgets.hits({
     container: '#articles',
@@ -32,8 +40,8 @@ search.addWidgets([
                         {{#helpers.highlight}}{ "attribute": "section" }{{/helpers.highlight}}
                        </div>
                        <div class="hit-description">
-                       {{{details}}}
 
+                        {{#helpers.highlight}}{ "attribute": "details" }{{/helpers.highlight}}
                        </div>
                       </div>
                     </div>
