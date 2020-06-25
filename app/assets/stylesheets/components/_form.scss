@@ -21,3 +21,86 @@
   border-radius: 0.2em;
   box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
+
+form input {
+
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+// form {
+//   position: relative;
+// }
+
+// form button{
+//   position: absolute;
+//   right: 1px;
+//   top: 4px;
+//   border-radius: 50%;
+//   background-color: white;
+//   border-color: white;
+//   color: white;
+// }
+#governance-list{
+  padding: 1em;
+}
+
+// li {
+//   list-style-type: none;
+// }
+
+// .ais-RefinementList-count {
+//   background-color: #5468FF;
+//   border-radius: 30%;
+// }
+
+.ais-ClearRefinements {
+  margin: 1em 0;
+}
+
+.ais-SearchBox {
+  margin: 1em 0;
+}
+
+
+.ais-InstantSearch {
+  max-width: 960px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.ais-Hits-item {
+  margin-bottom: nonz;
+  // width: calc(50% - 1rem);
+}
+
+.ais-Hits ol li {
+  border: none!important;
+  box-shadow: none!important;
+  width: 100%;
+  margin-top: none;
+  margin-bottom: none;
+}
+
+
+
+.hit-name {
+  margin-bottom: 0.5em;
+}
+
+.hit-description {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
