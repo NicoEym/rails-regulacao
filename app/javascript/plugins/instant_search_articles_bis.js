@@ -22,13 +22,18 @@ search.addWidgets([
                     <div class="card-article">
                       <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
                       <div class="card-article-infos">
-                       <div class="hit-name">
-                        {{#helpers.highlight}}{ "attribute": "governance" }{{/helpers.highlight}}
-                        {{#helpers.highlight}}{ "attribute": "chapter" }{{/helpers.highlight}}
+                      <div class="hit-governance">
+                        <b>{{#governance}}{{title}}{{/governance}}</b>
+                       </div>
+                       <div class="hit-chapter">
+                        {{chapter}}
+                       </div>
+                      <div class="hit-section">
                         {{#helpers.highlight}}{ "attribute": "section" }{{/helpers.highlight}}
                        </div>
                        <div class="hit-description">
-                          {{#helpers.highlight}}{ "attribute": "details" }{{/helpers.highlight}}
+                       {{{details}}}
+
                        </div>
                       </div>
                     </div>
@@ -46,6 +51,4 @@ search.addWidgets([
 // 5. Start the search!
 
 
-
-
-export { search };
+export { search};
