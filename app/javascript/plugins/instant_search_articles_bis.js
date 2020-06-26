@@ -36,9 +36,6 @@ searchArticles.addWidgets([
                       <div class="hit-governance">
                         <b>{{#governance}}{{title}}{{/governance}}</b>
                        </div>
-                       <div class="hit-chapter">
-                        {{chapter}}
-                       </div>
                       <div class="hit-section">
                         {{#helpers.highlight}}{ "attribute": "section" }{{/helpers.highlight}}
                        </div>

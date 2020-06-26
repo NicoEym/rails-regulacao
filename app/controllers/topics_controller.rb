@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
   def index
     @topics = Topic.first(15)
+    @all_topics = Topic.all
   end
 
   def show

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="header-form">
     <div class="text-center">
-      <p>Ariane vai pesquisar artigos dentro de <%= @topics.count %> temas.</p>
+      <p>Ariane vai pesquisar artigos dentro de <%= @all_topics.count %> temas.</p>
     </div>
 
     <%= simple_form_for :search, url: topic_path(:id), method: "GET", input_html: { class: "form-inline" } do |f| %>
