@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_28_193119) do
+ActiveRecord::Schema.define(version: 2020_06_26_192632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2020_05_28_193119) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "topic_string"
+    t.string "details_algolia"
     t.index ["governance_id"], name: "index_articles_on_governance_id"
   end
 

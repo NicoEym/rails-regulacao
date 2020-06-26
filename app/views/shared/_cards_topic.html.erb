@@ -4,11 +4,7 @@
       <div class="card-topic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1504607798333-52a30db54a5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
         <%= link_to("", topic_path(topic.id), class:"card-link")  %>
            <div class="card-topic_details">
-
-
             <h2 class="text-center"><%= topic.name %> </h2>
-            <h6 class="text-center"><%= topic.articles.count %> artigo(s) relacionado(s)...</h6>
-
           </div>
       </div>
     </div>
@@ -17,7 +13,3 @@
 
 
 
-<!-- <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
-  </div>
- -->

@@ -16,11 +16,12 @@
     <meta property="og:site_name" content="<%= meta_title %>" />
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+
      <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css"
     />
+    <%= stylesheet_link_tag 'application', media: 'all' %>
      <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>

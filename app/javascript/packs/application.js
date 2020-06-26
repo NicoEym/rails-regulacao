@@ -5,11 +5,21 @@ import "bootstrap";
 // import { initAutocomplete } from '../plugins/init_autocomplete';
 import { instantSearchTopics } from '../plugins/instant_search_topics.js';
 // import { instantSearchArticles } from '../plugins/instant_search_articles.js';
-import { search} from '../plugins/instant_search_articles_bis.js';
+
+
+
+import { searchArticles } from '../plugins/instant_search_articles_bis.js';
+  // searchArticles.start()};
+
+
+// import { searchTopics } from '../plugins/instant_search_topics_bis.js';
+  // searchTopics.start()};
 
 // initAutocomplete();
 instantSearchTopics();
 
 // instantSearchArticles();
-search.start();
+
+searchArticles.start();
+// searchTopics.start();
 

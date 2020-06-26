@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :topics, only: [:show, :index] do
     resources :articles, only: [:index, :show]
   end
-  resources :governances, only: [:show, :index]
 
 
 end
