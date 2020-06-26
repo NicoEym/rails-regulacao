@@ -1,11 +1,14 @@
 
 // 1. Instantiate the search
-const search = instantsearch({
+const searchArticles = instantsearch({
   indexName: 'Article',
   searchClient: algoliasearch(process.env.ALGOLIASEARCH_APPLICATION_ID, process.env.ALGOLIASEARCH_API_KEY),
 });
 
-search.addWidgets([
+const url = window.location.href
+if (url.slice(-5) == "icles")
+{
+searchArticles.addWidgets([
   // 2. Create an interactive search box
   instantsearch.widgets.searchBox({
     container: '#articles_input',
@@ -40,8 +43,7 @@ search.addWidgets([
                         {{#helpers.highlight}}{ "attribute": "section" }{{/helpers.highlight}}
                        </div>
                        <div class="hit-description">
-
-                        {{#helpers.highlight}}{ "attribute": "details" }{{/helpers.highlight}}
+                       {{#helpers.highlight}}{ "attribute": "details_algolia" }{{/helpers.highlight}}
                        </div>
                       </div>
                     </div>
@@ -55,8 +57,8 @@ search.addWidgets([
   //   attribute: 'governance',
   // }),
 ]);
-
+}
 // 5. Start the search!
 
 
-export { search};
+export { searchArticles };

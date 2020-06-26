@@ -30,10 +30,10 @@ class ArticlesController < ApplicationController
     end
       @topics = @topics.uniq
     end
-
   end
 
   def show
     @article = Article.find(params[:id])
+    ["Para", "I -", "II –", "III –"]
   end
 end

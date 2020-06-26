@@ -36,12 +36,12 @@ const  addItineraryCard = (json) => {
 const html = (json) => {
 const new_html = `
               <div class="col-xs-12 col-md-4">
-                  <a href="/topics/${json.id}/">
+                  <a href="/topics/${json.objectID}/">
                     <div class="card-topic" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1504607798333-52a30db54a5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
 
                          <div class="card-topic_details">
                           <h2 class="text-center">${json.name} </h2>
-                          <h6 class="text-center">${json.artigos} artigo(s) relacionado(s)...</h6>
+
                         </div>
                     </div>
                   </div>

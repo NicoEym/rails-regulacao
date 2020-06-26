@@ -81,7 +81,10 @@ form input {
 }
 
 .ais-Hits-item {
-  margin-bottom: nonz;
+   margin-top: none!important;
+  margin-bottom: none!important;
+  padding-top: none!important;
+  padding-bottom: none!important;
   // width: calc(50% - 1rem);
 }
 
@@ -89,8 +92,11 @@ form input {
   border: none!important;
   box-shadow: none!important;
   width: 100%;
-  margin-top: none;
-  margin-bottom: none;
+  margin-top: none!important;
+  margin-bottom: none!important;
+  padding-top:none!important;
+  padding-bottom:none!important;
+
 }
 
 

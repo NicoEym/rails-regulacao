@@ -3,8 +3,8 @@ class Article < ApplicationRecord
   include AlgoliaSearch
 
   algoliasearch do
-    attributes :chapter, :section, :number, :details, :governance, :topic_string
-    searchableAttributes ['topic_string', 'details', 'section', 'governance']
+    attributes :chapter, :section, :number, :details_algolia, :governance, :topic_string
+    searchableAttributes ['topic_string', 'details_algolia', 'section', 'governance']
     attributeForDistinct "governance"
   end
 
