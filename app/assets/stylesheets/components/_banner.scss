@@ -9,7 +9,6 @@
   // transform: scaleX(-1);
 }
 
-
 .top-left {
   position: relative;
   top: 60%;
@@ -34,9 +33,7 @@
   // transform: scaleX(-1);
 }
 
-
 .form-banner {
-
   height:100vh;
   min-height: calc(100vh - 70px);
   display: flex;
@@ -49,9 +46,6 @@
   color: rgb(255, 255, 255);
   opacity: 0.9;
 }
-
-
-
 
 .placeholder-home::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: rgb(255, 255, 255)!important;
