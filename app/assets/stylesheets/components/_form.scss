@@ -80,26 +80,21 @@ form input {
   margin: 0 auto;
 }
 
-.ais-Hits-item {
-   margin-top: none!important;
-  margin-bottom: none!important;
-  padding-top: none!important;
-  padding-bottom: none!important;
-  // width: calc(50% - 1rem);
-}
+
 
 .ais-Hits ol li {
   border: none!important;
   box-shadow: none!important;
   width: 100%;
-  margin-top: none!important;
-  margin-bottom: none!important;
-  padding-top:none!important;
-  padding-bottom:none!important;
+  margin-top: 0rem;
+  padding: 0rem;
 
 }
 
-
+.ais-Results-item {
+  margin: none!important;
+  padding: none!important;
+}
 
 .hit-name {
   margin-bottom: 0.5em;
