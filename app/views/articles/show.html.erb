@@ -9,19 +9,19 @@
         <h4 class="green"><%= @article.section %> <br><br> </h4>
     </div>
 
-    <div class="center text-inline">
-      <h5>Assuntos do artigo: </h5>
-      <% @article.topics.each do |topic| %>
-        <h5><i><%= link_to("#"+topic.name , topic_path(topic.id))  %></i></h5>
-      <% end %>
-    </div>
-
     <div class="center">
       <h5><br><u>Artigo:</u> <%= @article.number %></h5>
     </div>
 
     <div>
       <p><%= @article.details.html_safe %>  </p>
+    </div>
+
+       <div class="center text-inline">
+      <h5>Assuntos do artigo: </h5>
+      <% @article.topics.each do |topic| %>
+        <h5><i><%= link_to("#"+topic.name , topic_path(topic.id))  %></i></h5>
+      <% end %>
     </div>
   </div>
 </div>
