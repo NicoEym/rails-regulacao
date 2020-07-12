@@ -15,4 +15,8 @@ class Article < ApplicationRecord
   validates :details, presence: true
   has_many :article_topics
   has_many :topics, through: :article_topics
+
+  def self.related(topic)
+    self.where(topic: topic)
+  end
 end

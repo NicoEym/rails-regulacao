@@ -34,6 +34,5 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    ["Para", "I -", "II –", "III –"]
   end
 end
