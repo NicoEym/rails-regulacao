@@ -2,26 +2,27 @@
 
   <div class="white">
     <div class="center">
-        <h5><%= @article.governance.title %> </h5>
+        <h4 class="green"><%= @article.governance.title %> </h4>
     </div>
     <div class="spaceb center">
-        <h4 class="green"><%= @article.chapter %>  </h4>
-        <h4 class="green"><%= @article.section %> <br><br> </h4>
+        <h5 class="green"><%= @article.chapter %>  </h5>
+        <h5 class="green"><%= @article.section %>  </h5>
     </div>
-
-    <div class="center">
-      <h5><br><u>Artigo:</u> <%= @article.number %></h5>
-    </div>
-
+    <br>
+    <br>
     <div>
+      <h5><u>Artigo <%= @article.number %>:</u>
+      <% @article.topics.each do |topic| %>
+        <i><%= link_to("#"+topic.name , topic_path(topic.id))  %></i>
+      <% end %></h5>
+    </div>
+
+    <div>s
       <p><%= @article.details.html_safe %>  </p>
     </div>
 
-       <div class="center text-inline">
-      <h5>Assuntos do artigo: </h5>
-      <% @article.topics.each do |topic| %>
-        <h5><i><%= link_to("#"+topic.name , topic_path(topic.id))  %></i></h5>
-      <% end %>
+    <div>
+      <p>Outros artigos relacionados</p>
     </div>
   </div>
 </div>
