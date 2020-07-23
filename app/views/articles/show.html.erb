@@ -5,24 +5,38 @@
         <h4 class="green"><%= @article.governance.title %> </h4>
     </div>
     <div class="spaceb center">
-        <h5 class="green"><%= @article.chapter %>  </h5>
-        <h5 class="green"><%= @article.section %>  </h5>
+        <h5 class="green"><%= @article.chapter %></h5>
+        <h5 class="green"><%= @article.section %></h5>
     </div>
     <br>
     <br>
     <div>
       <h5><u>Artigo <%= @article.number %>:</u>
-      <% @article.topics.each do |topic| %>
+      <% @topics.each do |topic| %>
         <i><%= link_to("#"+topic.name , topic_path(topic.id))  %></i>
       <% end %></h5>
     </div>
 
-    <div>s
-      <p><%= @article.details.html_safe %>  </p>
+    <div>
+      <p><%= @article.details.html_safe %></p>
     </div>
 
     <div>
-      <p>Outros artigos relacionados</p>
+      <h5><u>Outros artigos relacionados:</u></h5>
+
+        <div class="row">
+        <% @related_articles.each do |related_article| %>
+          <div class="col-xs-12 col-md-12">
+            <%= link_to("", article_path(related_article.id), class:"card-link") %>
+            <div class="card">
+
+              <i><%= "#{related_article.governance.title} - #{related_article.chapter} - #{related_article.section}" %><i>
+              <br>
+               <p><%= "Artigo #{related_article.details[0..80]} [...]" %> </p>
+              </div>
+            </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
