@@ -34,5 +34,14 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @topics = @article.topics
+    @related_articles = []
+    @topics.each do |topic|
+      this_topic_articles = topic.articles
+      this_topic_articles.each do |article|
+        @related_articles << article
+      end
+    end
+    @related_articles = @related_articles.uniq - [@article]
   end
 end
