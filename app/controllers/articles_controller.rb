@@ -35,13 +35,19 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @topics = @article.topics
-    @related_articles = []
+    @related_articles_CVM = []
+    @related_articles_ANBIMA = []
     @topics.each do |topic|
       this_topic_articles = topic.articles
       this_topic_articles.each do |article|
-        @related_articles << article
+        if article.is_CVM?
+          @related_articles_CVM << article
+        elsif article.is_ANBIMA?
+          @related_articles_ANBIMA << article
+        end
       end
     end
-    @related_articles = @related_articles.uniq - [@article]
+    @related_articles_CVM = @related_articles_CVM.uniq.first(5)
+    @related_articles_ANBIMA = @related_articles_ANBIMA.uniq.first(5)
   end
 end

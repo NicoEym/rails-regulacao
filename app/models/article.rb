@@ -1,5 +1,4 @@
 class Article < ApplicationRecord
-
   include AlgoliaSearch
 
   algoliasearch do
@@ -18,5 +17,13 @@ class Article < ApplicationRecord
 
   def self.related(topic)
     self.where(topic: topic)
+  end
+
+  def is_CVM?
+    governance.title == "CVM Nº 555"
+  end
+
+  def is_ANBIMA?
+    governance.title == "Código Adm. Rec. de Terceiros -  ANBIMA (2020)"
   end
 end
