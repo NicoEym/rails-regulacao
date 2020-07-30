@@ -25,6 +25,16 @@ a { color: inherit;
   }
 }
 
+ul {
+  list-style-type: none;
+
+  li {
+  display: inline-block;
+  }
+}
+
+
+
 body {
   background-color: #F9F9F9;
 }
@@ -100,11 +110,20 @@ body {
   padding-left: 15px;
 }
 
+.padding1 {
+  padding: 1em;
+}
+
 .width100 {
   width: 100%;
 
 }
 .chapter-font {
   font-size: 5em;
+}
+
+.margin1em {
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 

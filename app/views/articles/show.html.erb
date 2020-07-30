@@ -11,30 +11,37 @@
     <br>
     <br>
     <div>
-      <h5><u>Artigo <%= @article.number %>:</u>
+      <ul>
       <% @topics.each do |topic| %>
-        <i><%= link_to("#"+topic.name , topic_path(topic.id))  %></i>
-      <% end %></h5>
+        <li><h5><%= link_to("#"+topic.name , topic_path(topic.id), class:"btn-tag")  %></h5></li>
+      <% end %>
+      </ul>
     </div>
 
-    <div>
+    <div class="margin1em card padding1">
       <p><%= @article.details.html_safe %></p>
     </div>
 
     <div>
-      <h5><u>Outros artigos relacionados:</u></h5>
+      <p><u>Outros artigos relacionados na CVM555:</u></p>
 
-        <div class="row">
-        <% @related_articles.each do |related_article| %>
+      <div class="row">
+        <% @related_articles_CVM.each do |related_article| %>
           <div class="col-xs-12 col-md-12">
             <%= link_to("", article_path(related_article.id), class:"card-link") %>
-            <div class="card">
 
-              <i><%= "#{related_article.governance.title} - #{related_article.chapter} - #{related_article.section}" %><i>
-              <br>
-               <p><%= "Artigo #{related_article.details[0..80]} [...]" %> </p>
-              </div>
-            </div>
+               <p><%= "Artigo #{related_article.details[0..7]}" %> </p>
+
+          </div>
+        <% end %>
+      <p><u>Outros artigos relacionados no Codigo Anbima:</u></p>
+        <% @related_articles_ANBIMA.each do |related_article| %>
+          <div class="col-xs-12 col-md-12">
+            <%= link_to("", article_path(related_article.id), class:"card-link") %>
+
+               <p><%= "Artigo #{related_article.details[0..7]}" %> </p>
+
+          </div>
         <% end %>
       </div>
     </div>
