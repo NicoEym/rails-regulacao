@@ -67,12 +67,28 @@
   color: white;
   border-radius: 3px;
   text-align: center;
-  width: 100%;
 
   &:hover {
     background-color: #009B3A;
     color: white;
     border: 1px solid #009B3A;
+    text-decoration: none;
+  }
+}
+
+.btn-tag-inverted {
+  background-color: white;
+  border: 1px solid white;
+  padding: 0.4rem;
+  color: #009B3A;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  &:hover {
+    background-color: white;
+    color: #009B3A;
+    border: 1px solid white;
     text-decoration: none;
   }
 }
