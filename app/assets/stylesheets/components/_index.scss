@@ -28,12 +28,11 @@ a { color: inherit;
 ul {
   list-style-type: none;
 
-  li {
-  display: inline-block;
-  }
 }
 
-
+.tags-inline {
+  display: inline-block;
+}
 
 body {
   background-color: #F9F9F9;
@@ -127,3 +126,8 @@ body {
   margin-top: 2em;
 }
 
+
+.margin1em-hor {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
