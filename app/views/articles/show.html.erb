@@ -21,14 +21,14 @@
     </div>
 
     <div>
-      <p><u>Outros artigos relacionados na CVM555:</u></p>
+      <p><i>Outros artigos relacionados na instrução CVM 555:</i></p>
       <div class="row margin1em-hor">
         <% @related_articles_CVM.each do |related_article| %>
           <h6 class="btn-tag-inverted"><%= link_to("#{related_article.details[0..8]}", article_path(related_article.id)) %> </h6>
         <% end %>
       </div>
 
-      <p><u>Outros artigos relacionados no Codigo Anbima:</u></p>
+      <p><i>Outros artigos relacionados no Codigo Anbima:</i></p>
       <div class="row margin1em-hor">
         <% @related_articles_ANBIMA.each do |related_article| %>
             <h6 class="btn-tag-inverted"><%= link_to("#{related_article.details[0..8]}", article_path(related_article.id)) %>
