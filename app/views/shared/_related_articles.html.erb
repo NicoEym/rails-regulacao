@@ -1,0 +1,7 @@
+<p><i>Outros artigos relacionados <%= locals[:title] %> :</i></p>
+<div class="row margin1em-hor">
+  <% locals[:articles_array].each do |related_article| %>
+    <h6 class="btn-tag-inverted"><%= link_to("#{related_article.details[0..8]}", article_path(related_article.id)) %>
+  <% end %>
+</div>
+
