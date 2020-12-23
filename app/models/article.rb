@@ -19,8 +19,12 @@ class Article < ApplicationRecord
     self.where(topic: topic)
   end
 
-  def is_CVM?
+  def is_CVM555?
     governance.title == "CVM Nº 555"
+  end
+
+  def is_CVM558?
+    governance.title == "CVM Nº 558"
   end
 
   def is_ANBIMA?
